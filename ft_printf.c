@@ -6,7 +6,7 @@
 /*   By: mel-mora <mel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 11:15:33 by mel-mora          #+#    #+#             */
-/*   Updated: 2024/11/13 07:49:20 by mel-mora         ###   ########.fr       */
+/*   Updated: 2024/11/13 07:59:26 by mel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,12 @@ static void	print_params(const char c, va_list args, int *resu)
 	else if (c == 'u')
 		ft_putnbr_unsigned(va_arg(args, unsigned int), resu);
 	else if (c == 'x' || c == 'X')
-		ft_putnbr_hexa(va_arg(args, unsigned long), resu, c);
+		ft_putnbr_hexa(va_arg(args, unsigned int), resu, c);
 	else if (c == 'p')
+	{
+		ft_putstr ("0x", resu);
 		ft_tohexa(va_arg(args, unsigned long), resu);
+	}
 	else
 		ft_putchar(c, resu);
 }

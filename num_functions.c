@@ -6,7 +6,7 @@
 /*   By: mel-mora <mel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:35:44 by mel-mora          #+#    #+#             */
-/*   Updated: 2024/11/12 12:57:39 by mel-mora         ###   ########.fr       */
+/*   Updated: 2024/11/13 07:54:05 by mel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_putnbr_unsigned(unsigned int num, int *resu)
 	}
 }
 
-void	ft_putnbr_hexa(unsigned long num, int *resu, const char c)
+void	ft_putnbr_hexa(unsigned int num, int *resu, const char c)
 {
 	char	*tab;
 

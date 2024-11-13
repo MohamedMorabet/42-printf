@@ -6,7 +6,7 @@
 /*   By: mel-mora <mel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:01:48 by mel-mora          #+#    #+#             */
-/*   Updated: 2024/11/12 18:19:50 by mel-mora         ###   ########.fr       */
+/*   Updated: 2024/11/13 07:59:07 by mel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	ft_tohexa(unsigned long num, int *resu)
 	char	*tab;
 
 	tab = "0123456789abcdef";
-	ft_putstr ("0x", resu);
 	if (num < 16)
 		ft_putchar (tab[num], resu);
 	else
