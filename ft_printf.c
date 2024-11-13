@@ -6,7 +6,7 @@
 /*   By: mel-mora <mel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 11:15:33 by mel-mora          #+#    #+#             */
-/*   Updated: 2024/11/12 13:54:26 by mel-mora         ###   ########.fr       */
+/*   Updated: 2024/11/13 07:49:20 by mel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ static void	print_params(const char c, va_list args, int *resu)
 		ft_putchar(va_arg(args, int), resu);
 	else if (c == 's')
 		ft_putstr(va_arg(args, char *), resu);
-	else if (c == 'd')
-		ft_putnbr_dec(va_arg(args, int), resu);
-	else if (c == 'i')
+	else if (c == 'd' || c == 'i')
 		ft_putnbr_dec(va_arg(args, int), resu);
 	else if (c == 'u')
 		ft_putnbr_unsigned(va_arg(args, unsigned int), resu);
@@ -38,11 +36,11 @@ int	ft_printf(const char *format, ...)
 	int		resu;
 	va_list	args;
 
-	va_start(args, format);
-	if (write(1, "", 1) == -1)
+	if (write(1, NULL, 0) == -1)
 		return (-1);
 	i = 0;
 	resu = 0;
+	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
